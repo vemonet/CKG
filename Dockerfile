@@ -39,10 +39,10 @@ RUN echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" > /et
 # JAVA
 RUN mkdir -p /usr/local/oracle-jre8-installer-local
 
-ADD /resources/jre-8u221-linux-x64.tar.gz /usr/local/oracle-jre8-installer-local
+ADD /resources/jre-8u251-linux-x64.tar.gz /usr/local/oracle-jre8-installer-local
 
-RUN update-alternatives --install "/usr/bin/java" "java" "/usr/local/oracle-jre8-installer-local/jre1.8.0_221/bin/java" 1500 && \
-    update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/oracle-jre8-installer-local/jre1.8.0_221/bin/javaws" 1500 
+RUN update-alternatives --install "/usr/bin/java" "java" "/usr/local/oracle-jre8-installer-local/jre1.8.0_251/bin/java" 1500 && \
+    update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/oracle-jre8-installer-local/jre1.8.0_251/bin/javaws" 1500 
 
 # NEO4J
 RUN wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add - && \
