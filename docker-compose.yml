@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+
+  ckg:
+    # build: .
+    image: umids/ckg
+    container_name: ckg-app
+    restart: unless-stopped
+    volumes: 
+      - ./log:/CKG/log
+      - ./data:/CKG/data
+    environment: 
+      - EXEC_MODE="minimal"
+    ports:
+      - 8050:8050
+      - 7470:7474
+      - 8090:8090
+      - 7680:7687
+      - 6379:6379
