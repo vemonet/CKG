@@ -16,8 +16,8 @@ services:
       - VIRTUAL_PORT=7474
     ports:
       - 8050:8050 # CKG prod
-      - 7470:7474 # HTTP Neo4j
+      - 7474:7474 # HTTP Neo4j
+      - 7687:7687 # Bolt Neo4j
       - 8090:8090 # jupyterHub
-      - 7680:7687 # Bolt Neo4j
       - 6379:6379 # Redis
       # CKG dev: 5000
